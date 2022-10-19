@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+    <title>APBD Kota Bandung</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+  </head>
+
+  <body>
+    <div class="big-wrapper">
+      <div class="big-wrapper light">
+      
+          <nav id="nav-bg-color" class="navbar fixed-top navbar-expand-lg navbar-scrolled bg-transparent shadow-none">
+            <div class="container"> 
+              <div class="logo">
+                <img src="./img/logo.png" alt="Logo" />
+              </div>     
+              
+              <!-- Ini menu yang dropdown nya di klik tapi logo nya blum responsive 
+              <nav id="nav-bg-color" class="navbar fixed-top navbar-expand-lg navbar-scrolled bg-transparent shadow-none">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="Logo" class="d-inline-block align-text-top"></a>
+                  <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link links ul" aria-current="page" href="#">Beranda</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                          Data Anggaran
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
+                          <li>
+                            <a class="dropdown-item" href="#">APBD 2017</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">APBD 2018</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">APBD 2019</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Selengkapnya</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                          Perbandingan
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
+                          <li>
+                            <a class="dropdown-item" href="#">APBD 2017</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">APBD 2018</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">APBD 2019</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Selengkapnya</a>
+                          </li>
+                        </ul>
+                        <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="#">Tentang</a>
+                        </li>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav> -->
+  
+
+              <div class="links">
+                <ul>
+                  <li><a href="#">Beranda</a></li>
+                    <div class="dropdown">
+                      <li><a href="#" class="nav-item dropdown">Data Anggaran</a></li>
+                          <div class="dropdown-content-menu">
+                            <li href="#">APBD 2017</li>
+                            <li href="#">APBD 2018</li>
+                            <li href="#">APBD 2019</li>
+                            <li href="#">Selengkapnya</li>
+                          </div>
+                    </div>
+
+                    <div class="dropdown">
+                      <li><a href="#" class="nav-item dropdown">Perbandingan</a></li>
+                      <div class="dropdown-content-menu">
+                        <li href="#">APBD 2017</li>
+                        <li href="#">APBD 2018</li>
+                        <li href="#">APBD 2019</li>
+                        <li href="#">Selengkapnya</li>
+                      </div>
+                    </div>
+                  <li><a href="#">Tentang</a></li>
+                </ul>
+              </div>
+
+              <div class="overlay"></div>
+
+              <div class="hamburger-menu">
+                <div class="bar"></div>
+              </div>
+            </div>
+          </nav>
+
+            <div class="showcase-area">
+              <div class="container">
+                <div class="left">
+                  <div class="big-title">
+                    <h1>Selamat Datang di</h1>
+                    <h1>Portal APBD Kota Bandung</h1>
+                  </div>
+                  <p class="text">
+                    Anggaran Pendapatan dan Belanja Daerah (APBD) adalah rencana keuangan tahunan pemerintahan daerah yang dibahas, 
+                    disetujui bersama oleh pemerintah daerah dan DPRD, dan ditetapkan dengan peraturan daerah. Seluruh data yang disajikan 
+                    pada aplikasi ini adalah data terbuka. Bebas untuk digunakan dan disebarluaskan, namun tetap mencantumkan sumber.
+                  </p>
+                </div>
+
+                <div class="right">
+                  <img src="./img/Monju 1.png" alt="Monumen Perjuangan" class="monju" />
+                </div>
+              </div>
+            </div>
+          
+      </div>
+
+        <div class="bottom-area">
+          <div id="container-anggaran" class="container">
+              <h1 id="strukur anggaran" class="toggle-struktur">Struktur Anggaran Kota Bandung</h1>
+
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img id="struktur_anggaran" src="img/pendapatan daerah.png" class="card-img-top" alt="Pendapatan Daerah"/>
+                    <div class="card-body">
+                      <h5 class="anggaran-title-card">Pendapatan Daerah</h5>
+                    </div>
+                    <h10 class="img-desc">Berdasarkan Peraturan Menteri Dalam Negeri No. 13 Tahun 2006 Tentang Pedoman Pengelolaan 
+                      Keuangan Daerah Pasal 17 Ayat (2) <br> Pendapatan daerah merupakan perkiraan yang terukur secara rasional yang 
+                      dapat dicapai untuk setiap sumber pendapatan</h10>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card">
+                    <img id="struktur_anggaran" src="img/Belanja Daerah.png" class="card-img-top" alt="Belanja Daerah"/>
+                    <div class="card-body">
+                      <h5 class="anggaran-title-card">Belanja Daerah</h5>
+                    </div>
+                    <h10 class="img-desc">Peraturan Menteri Dalam Negeri No. 13 Tahun 2006 Tentang Pedoman Pengelolaan Keuangan Daerah Pasal 18 Ayat (2)<br>
+                      Belanja daerah merupakan perkiraan beban pengeluaran daerah yang dialokasikan secara adil dan merata agar relatif dapat dinikmati 
+                      oleh seluruh kelompok masyarakat tanpa diskriminasi, khususnya dalam pemberian pelayanan umum</h10>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="card">
+                    <img id="struktur_anggaran" src="img/pembiayaan daerah.png" class="card-img-top" alt="Pembiayaan Daerah"/>
+                    <div class="card-body">
+                      <h5 class="anggaran-title-card">Pembiayaan Daerah</h5>
+                    </div>
+                    <h10 class="img-desc">Peraturan Menteri Dalam Negeri No. 13 Tahun 2006 Tentang Pedoman Pengelolaan Keuangan Daerah Pasal 17 Ayat (3) dan 18 Ayat (3)<br>
+                      Pembiayaan adalah semua penerimaan yang perlu dibayar kembali dan/atau pengeluaran yang akan diterima kembali baik pada tahun anggaran yang 
+                      bersangkutan maupun pada tahun-tahun anggaran berikutnya</h10>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- FAQ --> 
+        <div class="bottom-area">
+          <div id="container-anggaran" class="container">
+              <h1 class="desc-faq-title">Apa yang bisa kami bantu?</h1>
+              <p class="desc-faq">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', 
+                making it look like readable English</p>
+
+                <div class="subcribe">
+                  <div class="form-box">
+                    <input type="text" class="search-field email" placeholder="YourEmail@gmail.com">
+                    <button class="search-btn" type="button">subcribe</button>
+                  </div>
+                </div>
+
+                <div class="accordion">
+                  <div class="icon"></div>
+                  <h10>What is loram ipsum?</h10>
+                </div>
+
+                <div class="panel">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                </div>
+
+                <div class="accordion">
+                  <div class="icon"></div>
+                  <h10>Where does it come from?<h5>
+                </div>
+
+                <div class="panel">
+                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
+                    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, 
+                    and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                </div>
+
+                <div class="accordion">
+                  <div class="icon"></div>
+                  <h10>Why do we use it?</h10>
+                </div>
+
+                <div class="panel">
+                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that 
+                    it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+                </div>
+
+                <div class="accordion">
+                  <div class="icon"></div>
+                  <h10>Where can I get some?</h10>
+                </div>
+
+                <div class="panel">
+                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which 
+                    don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text</p>
+                </div>
+
+                <div class="accordion">
+                  <div class="icon"></div>
+                  <h10>The standard Lorem Ipsum passage, used since the 1500s<h5>
+                </div>
+
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                    fugiat nulla pariatur</p>
+                </div>
+          </div>
+        </div>
+        
+    </div>
+    <!-- End FAQ-->
+
+    <!--::: Footer 
+    <section class="footeer">
+      <footer class="bg-footer">
+        <!-- Grid container 
+        <div class="container p-4">
+          <!--Grid row
+          <div class="row boxfoot">
+            <!--Grid column
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <a class="navbar-brand" href="#"><img src="./img/logo-opendata.png" alt="" width="70" height="59" class="d-inline-block align-text-top"></a>
+            </div>
+            <!--Grid colum
+    
+            <!--Grid column
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="tuppercase">Open Data Bandung</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="twhite">Tentang Kami</a>
+                </li>
+                <li>
+                  <a href="#!" class="twhite">Kebijakan Privasi</a>
+                </li>
+                <li>
+                  <a href="#!" class="twhite">Bantuan</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid colum
+    
+            <!--Grid column
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="tuppercase">Atribusi</h5>
+    
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!" class="twhite">CKAN</a>
+                </li>
+                <li>
+                  <a href="#!" class="twhite">Open Knowledge Foundation</a>
+                </li>
+                <li>
+                  <a href="#!" class="twhite">Flourish Studio</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid colum
+
+            <!--Grid column
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="tuppercase">Aplikasi Turunan</h5>
+    
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!" class="twhite">ARIMBI</a>
+                </li>
+                <li>
+                  <a href="#!" class="twhite">Bandung City Dashboard</a>
+                </li>
+                <li>
+                  <a href="#!" class="twhite">Portal APBD Kota Bandung</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column
+
+            <!--Grid column
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="tuppercase">Pengembang</h5>
+    
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!" class="twhite">Monitoring dan Evaluasi</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column
+
+            <!--Grid column
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="tuppercase">Temukan Kami</h5>
+    
+              <ul class="list-unstyled">
+                <li>
+                  <a class="twhite" href="#!"><i class="fab fa-google"></i> bdg.data</a>
+                </li>
+                <li>
+                  <a class="twhite" href="#!"><i class="fab fa-instagram"></i> data@bandung.go.id</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--Grid row
+        </div>
+        <!-- Grid container 
+
+        <!-- Column Mitra 
+        <div class="grid klmitra">
+          <div class="g-col-6 g-col-md-4"></div>
+          <div class="g-col-6 g-col-md-4"></div>
+          <div class="g-col-6 g-col-md-4"></div>
+        </div>
+        <!-- Column Mitra 
+    
+        <!-- Copyright 
+        <div class="tcenter p-3">
+          © 2020 Copyright
+          Portal Data Kota Bandung 2022. All rights reserved
+        </div>
+        <!-- Copyright 
+      </footer>
+      <!-- Footer
+    </section> 
+    End Section FOOTER :::-->
+
+
+
+    <!-- search bar-->
+    <script>
+      const searchBox = document.querySelector(".search-box");
+      const searchBtn = document.querySelector(".search-icon");
+      const cancelBtn = document.querySelector(".cancel-icon");
+      const searchInput = document.querySelector("input");
+      const searchData = document.querySelector(".search-data");
+      searchBtn.onclick =()=>{
+        searchBox.classList.add("active");
+        searchBtn.classList.add("active");
+        searchInput.classList.add("active");
+        cancelBtn.classList.add("active");
+        searchInput.focus();
+        if(searchInput.value != ""){
+          var values = searchInput.value;
+          searchData.classList.remove("active");
+          searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+        }else{
+          searchData.textContent = "";
+        }
+      }
+      cancelBtn.onclick =()=>{
+        searchBox.classList.remove("active");
+        searchBtn.classList.remove("active");
+        searchInput.classList.remove("active");
+        cancelBtn.classList.remove("active");
+        searchData.classList.toggle("active");
+        searchInput.value = "";
+      }
+    </script>
+
+     <!-- JavaScript Files -->
+     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+     <script src="./js/app.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ 
+     <!-- MDB -->
+     <script type="text/javascript" src="js/mdb.min.js"></script>
+ 
+     <!-- Custom scripts -->
+     <script type="text/javascript"></script>
+
+    <script>
+      $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+        });
+
+        $(document).ready(function() {
+          $('#myCarousel').carousel({
+            interval: 10000
+        })
+      });
+    </script>
+    
+  </body>
+</html>

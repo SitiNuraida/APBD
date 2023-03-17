@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+    <title>APBD Kota Bandung</title>
+    <link rel="stylesheet" href="./css/Dana-Bagi-Hasil-Pajak-dari-Provinsi.css" />
+    
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+
+  </head>
+
+  <body>
+    <div class="big-wrapper">
+      <div class="big-wrapper light">
+      
+          <nav id="nav-bg-color" class="navbar fixed-top navbar-expand-lg navbar-scrolled bg-transparent shadow-none">
+            <div class="container"> 
+              <div class="logo">
+                <img src="./img/logo.png" alt="Logo"/>
+              </div>     
+               
+              <div class="links">
+                <ul>
+                  <li><a href="#">Beranda</a></li>
+                    <div class="dropdown">
+                      <li><a href="#" class="nav-item dropdown">Data Anggaran</a></li>
+                          <div class="dropdown-content-menu">
+                            <li href="#">APBD 2017</li>
+                            <li href="#">APBD 2018</li>
+                            <li href="#">APBD 2019</li>
+                            <li href="#">Selengkapnya</li>
+                          </div>
+                    </div>
+
+                    <div class="dropdown">
+                      <li><a href="#" class="nav-item dropdown">Perbandingan</a></li>
+                      <div class="dropdown-content-menu">
+                        <li href="#">APBD 2017</li>
+                        <li href="#">APBD 2018</li>
+                        <li href="#">APBD 2019</li>
+                        <li href="#">Selengkapnya</li>
+                      </div>
+                    </div>
+                  <li><a href="#">Tentang</a></li>
+                </ul>
+              </div>
+
+              <div class="overlay"></div>
+
+              <div class="hamburger-menu">
+                <div class="bar"></div>
+              </div>
+            </div>
+          </nav>
+
+            <div class="showcase-area">
+              <div class="container">
+                <div class="pajak-daerah">
+                  <div class="left">
+                    <div class="big-title">
+                      <h2>Dana Bagi Hasil Pajak dari Provinsi dan Pemerintah Daerah Lainnya</h2>
+                      <h1>Total: Rp. 747,573,257,268</h1>
+                    </div>
+                    <p class="desc-nominal">Tujuh ratus empat puluh tujuh triliun, lima ratus tujuh puluh tiga miliyar, dua ratus lima puluh tujuh ribu, dua ratus enam puluh delapan rupiah</p>
+                    <p class="text">
+                      Dana Bagi Hasil Pajak dari Provinsi dan Pemerintah Daerah Lainnya adalah bagian daerah yang berasal dari penerimaan Pajak Bumi dan Bangunan, Bea Perolehan Hak atas Tanah dan Bangunan, Pajak Penghasilan Pasal 25 dan Pasal 29 Wajib Pajak Orang Pribadi Dalam Negeri, dan Pajak Penghasilan Pasal 21 (Peraturan Pemerintah No. 55 Tahun 2005 tentang Dana Perimbangan)</p>
+                    <div class="row">
+                      <div class="col-6"><h6>Jenis Pendapatan</h6></div>
+                      <div class="col-6"><h6>Kontribusi Pada Dana Alokasi Khusus</h6></div>
+                      <div class="col-6 colisian">
+                        <img src="./img/kotak jenis dan kontribusi.png" class="jenis-pendapatan" alt="Kotak jenis dan konstribusi">
+                        <h4 class="isian-jenis-kontribusi">1</h4>
+                      </div>
+                      <div class="col-6">
+                        <img src="./img/kotak jenis dan kontribusi.png" class="jenis-pendapatan" alt="Kotak jenis dan konstribusi">
+                        <h4 class="isian-jenis-kontribusi1">43.72%</h4>
+                      </div>
+                    </div>   
+                  </div>
+                </div>
+
+                  <div class="right">
+                    <img src="./img/Dana Bagi Hasil Pajak dari Provinsi dan Pemerintah Daerah Lainnya.png" alt="Dana Bagi Hasil Pajak dari Provinsi dan 
+                    Pemerintah Daerah Lainnya" class="monju" />
+                  </div>
+              </div>
+            </div>
+          
+      </div>
+
+      <!-- ================================= Pendapatan dari Dana Alokasi Khusus ===================================== -->
+        <div class="bottom-area">
+          <div id="container-anggaran" class="container">
+              <h1 id="strukur anggaran" class="toggle-struktur">Pendapatan dari Dana Bagi Hasil Pajak dari Provinsi dan 
+                Pemerintah Daerah Lainnya </h1>
+          <table class="table table-hover">
+            <tr style="background-color: #B0DEFF;">
+              <td>Kode</td>
+              <td>Jenis Pendapatan</td>
+              <td>Jumlah Pendapatan</td>
+              <td>Persentase</td>
+            </tr>
+            <tr>
+              <td>4.3.3.01</td>
+              <td>Dana Bagi Hasil Pajak Dari Provinsi</td>
+              <td>Rp. 747,573,257,268</td>
+              <td>100.00%</td>
+            </tr>
+          </table>
+          </div>
+        </div>
+
+    </div>
+
+     <!-- JavaScript Files -->
+     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+     <script src="./js/app.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ 
+     <!-- MDB -->
+     <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script>
+      $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+        });
+
+        $(document).ready(function() {
+          $('#myCarousel').carousel({
+            interval: 10000
+        })
+      });
+    </script>
+    
+  </body>
+</html>

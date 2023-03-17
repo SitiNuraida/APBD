@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+    <title>APBD Kota Bandung</title>
+    <link rel="stylesheet" href="./css/perbandingan.css" />
+    
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+
+  </head>
+
+  <body>
+    <div class="big-wrapper">
+      <div class="big-wrapper light">
+      
+          <nav id="nav-bg-color" class="navbar fixed-top navbar-expand-lg navbar-scrolled bg-transparent shadow-none">
+            <div class="container"> 
+              <div class="logo">
+                <img src="./img/logo.png" alt="Logo" />
+              </div>     
+              
+              <div class="links">
+                <ul>
+                  <li class="main-menu"><a href="00 index - Kota BDG.html">Beranda</a></li>
+                    <div class="dropdown">
+                      <li class="main-menu"><a href="00 data-anggaran.html" class="nav-item dropdown">Data Anggaran</a></li>
+                          <div class="dropdown-content-menu">
+                            <li><a href="01 pendapatan-daerah.html">APBD 2017</a></li>
+                            <li><a href="01 pendapatan-daerah.html">APBD 2018</a></li>
+                            <li><a href="01 pendapatan-daerah.html">APBD 2019</a></li>
+                            <li><a href="00 data-anggaran.html">Selengkapnya</a></li>
+                          </div>
+                    </div>
+
+                  <li class="main-menu"><a href="00 perbandingan.html" class="nav-item dropdown">Perbandingan</a></li>
+                  <li class="main-menu"><a href="00 ringkasan.html">Ringkasan</a></li>
+                  <li class="main-menu"><a href="00 about.html">Tentang</a></li>
+                </ul>
+              </div>
+
+              <div class="overlay"></div>
+
+              <div class="hamburger-menu">
+                <div class="bar"></div>
+              </div>
+            </div>
+          </nav>
+
+            <div class="showcase-area">
+              <div class="container">
+                <div class="left">
+                  <div class="big-title">
+                    <h1>Apa bedanya dengan</h1>
+                    <h1>tahun sebelumnya?</h1>
+                  </div>
+                  <p class="text">
+                    Fitur Pebandingan merupakan fitur baru dari Portal APBD Kota Bandung. Dalam fitur ini, Anda dapat melihat perbedaan APDB Kota Bandung setiap tahunnya!
+                  </p>
+                </div>
+
+                <div class="right">
+                  <img src="./img/find.png" alt="Perbandingan Data" class="monju" />
+                </div>
+              </div>
+            </div>
+          
+      </div>
+
+      <!-- ================================= Pilih tahun perbandingan ===================================== -->
+        <div class="bottom-area">
+          <div id="container-anggaran" class="container">
+            <div data-aos="fade-up">
+              <h1 id="strukur anggaran" class="toggle-struktur">
+                <img src="./img/komparasi.png" alt="icon komparasi" class="icon-komparasi">
+                Komparasi Anggaran Urusan Pemerintahan </h1>
+            </div>
+                <h5>Silahkan pilih tahun yang akan dibandingkan</h5>
+
+                <div class="pilih-tahun">
+                  <div class="btn-group">
+                    <button class="btn btn-lg dropdown-toggle" type="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                      Pilih Tahun
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">2017</a></li>
+                      <li><a class="dropdown-item" href="#">2018</a></li>
+                      <li><a class="dropdown-item" href="#">2019</a></li>
+                    </ul>
+                  </div>
+
+                    <div class="btn-group">
+                      <button class="btn btn-lg dropdown-toggle" type="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        Pilih Tahun
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">2017</a></li>
+                        <li><a class="dropdown-item" href="#">2018</a></li>
+                        <li><a class="dropdown-item" href="#">2019</a></li>
+                      </ul>
+                  </div>
+
+                </div>
+          </div>
+        </div>
+        <!-- ================================= END pilih tahun perbandingan ============================== -->
+
+        <!-- ================================== GRAFIK PERBANDINGAN ======================================== -->
+        <div class="container">
+          <!-- Styles -->
+          <style>
+            #chartdiv {
+              width: 100%;
+              height: 500px;
+            }
+            </style>
+            
+            <!-- Resources -->
+            <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+            <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+            
+            <!-- Chart code -->
+            <script>
+            am5.ready(function() {
+            
+            // Create root element
+            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+            var root = am5.Root.new("chartdiv");
+            
+            
+            // Set themes
+            // https://www.amcharts.com/docs/v5/concepts/themes/
+            root.setThemes([
+              am5themes_Animated.new(root)
+            ]);
+            
+            
+            // Create chart
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/
+            var chart = root.container.children.push(am5xy.XYChart.new(root, {
+              panX: false,
+              panY: false,
+              wheelX: "panX",
+              wheelY: "zoomX",
+              layout: root.verticalLayout
+            }));
+            
+            
+            // Add legend
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
+            var legend = chart.children.push(
+              am5.Legend.new(root, {
+                centerX: am5.p50,
+                x: am5.p50
+              })
+            );
+            
+            var data = [{
+              "year": "2021",
+              "europe": 2.5,
+              "namerica": 2.5,
+              "asia": 2.1,
+              "lamerica": 1,
+              "meast": 0.8,
+              "africa": 0.4
+            }, {
+              "year": "2022",
+              "europe": 2.6,
+              "namerica": 2.7,
+              "asia": 2.2,
+              "lamerica": 0.5,
+              "meast": 0.4,
+              "africa": 0.3
+            }, {
+              "year": "2023",
+              "europe": 2.8,
+              "namerica": 2.9,
+              "asia": 2.4,
+              "lamerica": 0.3,
+              "meast": 0.9,
+              "africa": 0.5
+            }]
+            
+            
+            // Create axes
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+            var xRenderer = am5xy.AxisRendererX.new(root, {
+              cellStartLocation: 0.1,
+              cellEndLocation: 0.9
+            })
+            
+            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+              categoryField: "year",
+              renderer: xRenderer,
+              tooltip: am5.Tooltip.new(root, {})
+            }));
+            
+            xRenderer.grid.template.setAll({
+              location: 1
+            })
+            
+            xAxis.data.setAll(data);
+            
+            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+              renderer: am5xy.AxisRendererY.new(root, {
+                strokeOpacity: 0.1
+              })
+            }));
+            
+            
+            // Add series
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+            function makeSeries(name, fieldName) {
+              var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+                name: name,
+                xAxis: xAxis,
+                yAxis: yAxis,
+                valueYField: fieldName,
+                categoryXField: "year"
+              }));
+            
+              series.columns.template.setAll({
+                tooltipText: "{name}, {categoryX}:{valueY}",
+                width: am5.percent(90),
+                tooltipY: 0,
+                strokeOpacity: 0
+              });
+            
+              series.data.setAll(data);
+            
+              // Make stuff animate on load
+              // https://www.amcharts.com/docs/v5/concepts/animations/
+              series.appear();
+            
+              series.bullets.push(function() {
+                return am5.Bullet.new(root, {
+                  locationY: 0,
+                  sprite: am5.Label.new(root, {
+                    text: "{valueY}",
+                    fill: root.interfaceColors.get("alternativeText"),
+                    centerY: 0,
+                    centerX: am5.p50,
+                    populateText: true
+                  })
+                });
+              });
+            
+              legend.data.push(series);
+            }
+            
+            makeSeries("Europe", "europe");
+            makeSeries("North America", "namerica");
+            makeSeries("Asia", "asia");
+            makeSeries("Latin America", "lamerica");
+            makeSeries("Middle East", "meast");
+            makeSeries("Africa", "africa");
+            
+            
+            // Make stuff animate on load
+            // https://www.amcharts.com/docs/v5/concepts/animations/
+            chart.appear(1000, 100);
+            
+            }); // end am5.ready()
+            </script>
+            
+            <!-- HTML -->
+            <div id="chartdiv"></div>
+        </div>
+    <!-- ===================================END GRAFIK PERBANDINGAN ======================================== -->
+
+    <!-- Anggaran bidang pemerintah -->
+    <div id="container-anggaran" class="container">
+      <div data-aos="fade-up">
+        <h1 id="strukur anggaran" class="toggle-struktur">
+          <img src="./img/komparasi.png" alt="icon komparasi" class="icon-komparasi">
+          Komparasi Anggaran Bidang Pemerintahan </h1>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center" id="pilih-bidang-pemerintah">
+      <div class="flex-shrink-0">Bidang Pemerintah: </div>
+      <div class="flex-grow-1 ms-3">
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          > Pilih Bidang Pemerintah
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Pendidikan</a></li>
+            <li><a class="dropdown-item" href="#">Kesehatan</a></li>
+            <li><a class="dropdown-item" href="#">Pekerjaan Umum dan Penataan Ruang</a></li>
+            <li><a class="dropdown-item" href="#">Perumahan Rakyat dan Kawasan Pemukiman</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tampilan pilihan bidang pemerintah -->
+    <div class="table-responsive"> 
+      <table class="table">
+        <tr style="background-color: #8DDBE0;">
+          <td colspan="5">Bidang Pemerintah: Pendidikan</td>
+        </tr>
+
+      <tbody style="background-color: #FBFBFB;">
+        <tr>
+          <td>Anggaran 2017 (Rp)</td>
+          <td>Anggaran 2018 (Rp)</td>
+          <td>Selisih Anggaran (Rp)</td>
+          <td>%</td>
+          <td></td>
+        </tr>
+        <tr class="angka">
+          <td>1,217,206,616,275</td>
+          <td>1,624,696,964,375</td>
+          <td>407,490,348,100</td>
+          <td>33.48</td>
+          <td rowspan="4" class="upper"><img src="./img/Naik.png" alt="Naik"></td>
+        </tr>
+        <tr class="terbilang">
+          <td>Satu triliun, dua ratus tujuh belas miliyar, dua ratus enam juta, enam ratus enam belas ribu, dua ratus tujuh puluh lima rupiah</td>
+          <td>Satu triliun, enam ratus dua puluh empat miliyar, enam ratus sembilan puluh enam juta, semblian ratus enam puluh empat ribu, tiga ratus tujuh puluh lima rupiah</td>
+          <td>Empat ratus tujuh miliyar, empat ratus sembilan puluh juta, tiga ratus empat puluh delapan ribu, seratus rupiah</td>
+          <td>Tiga puluh tiga koma empat puluh delapan persen</td>
+        </tr>
+      </tbody>
+      </table>
+      </div>
+    
+
+    <!-- Anggaran Perangkat Daerah -->
+        <div id="container-anggaran" class="container">
+          <div data-aos="fade-up">
+            <h1 id="strukur anggaran" class="toggle-struktur">
+              <img src="./img/komparasi.png" alt="icon komparasi" class="icon-komparasi">
+              Komparasi Anggaran Perangkat Daerah </h1>
+          </div>
+        </div>
+    
+        <div class="d-flex align-items-center" id="pilih-bidang-pemerintah">
+          <div class="flex-shrink-0">Perangkat Daerah: </div>
+          <div class="flex-grow-1 ms-3">
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              > Perangkat Daerah
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Pendidikan</a></li>
+                <li><a class="dropdown-item" href="#">Kesehatan</a></li>
+                <li><a class="dropdown-item" href="#">Pekerjaan Umum dan Penataan Ruang</a></li>
+                <li><a class="dropdown-item" href="#">Perumahan Rakyat dan Kawasan Pemukiman</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tampilan pilihan bidang pemerintah -->
+        <div class="table-responsive">
+          <table class="table">
+            <tr style="background-color: #8DDBE0;">
+              <td colspan="5">Perangkat Daera: Dinas Lingkungan Hidup dan Kebersihan</td>
+            </tr>
+
+          <tbody style="background-color: #FBFBFB;">
+            <tr>
+              <td>Anggaran 2017 (Rp)</td>
+              <td>Anggaran 2018 (Rp)</td>
+              <td>Selisih Anggaran (Rp)</td>
+              <td>%</td>
+              <td></td>
+            </tr>
+            <tr class="angka">
+              <td>170,455,644,781</td>
+              <td>90,900,414,788</td>
+              <td>-79,555,229,993</td>
+              <td>-46.67</td>
+              <td rowspan="4" class="upper"><img src="./img/turun.png" alt="Turun"></td>
+            </tr>
+            <tr class="terbilang">
+              <td>Seratus tujuh puluh miliyar, empat ratus lima puluh lima juta, enam ratus empat puluh empat ribu, tujuh ratus delapan puluh satu rupiah</td>
+              <td>Sembilan puluh miliyar, sembilan ratus juta, empat ratus empat belas ribu, tujuh ratus delapan puluh delapan rupiah</td>
+              <td>Minus tujuh puluh sembilan miliyar, lima ratus lima puluh lima juta, dua ratus dua puluh sembilan ribu, sembilan ratus sembilan puluh tiga rupiah</td>
+              <td>Minus empat puluh enam koma enam puluh tujuh persen </td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+
+    </div>
+
+        <!-- Footer (Disamakan dengan yang open data) -->
+        <footer class="text-center text-lg-start text-white" style="position:relative; background-color: #F0EEEE;">
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+          <!-- Section: Links -->
+          <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-6 col-xl-3 mx-auto mt-3 mb-4 mb-md-0">
+              <a class="navbar-brand" href="#"><img src="img/logo-opendata.png" alt="" width="70" height="59" class="d-inline-block align-text-top" id="logo-open-data"></a>
+            </div>
+            <!-- Grid column -->
+      
+            <hr class="w-100 clearfix d-md-none" />
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-3">
+              <h6 class="text-black mb-4 font-weight-bold" style="font-weight: 700;">Alamat</h6>
+              <p>
+                <a class="text-black">Jl. Wastukencana No.2, Babakan Ciamis, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40117</a>
+              </p>
+              <p>
+            </div>
+      
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-3">
+              <h6 class="text-black mb-4 font-weight-bold" style="font-weight: 700;">Open Data Kota Bandung</h6>
+              <p>
+                <a href="#" class="text-black">Tentang Kami</a>
+              </p>
+              <p>
+                <a href="#" class="text-black">Kebijakan Privasi</a>
+              </p>
+              <p>
+                <a href="#" class="text-black">Bantuan</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+      
+            <hr class="w-100 clearfix d-md-none" />
+      
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-3">
+              <h6 class="text-black mb-4 font-weight-bold" style="font-weight: 700;">
+                Atribusi
+              </h6>
+              <p>
+                <a href="#!"><i class="fab fa-google"></i> bdg.data</a>
+              </p>
+              <p>
+                <a href="#!"><i class="fab fa-instagram"></i> data@bandung.go.id</a>
+              </p>
+            </div>
+      
+            <!-- Grid column 
+            <hr class="w-100 clearfix d-md-none" />
+            Grid column -->
+          </div>
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-12 mx-auto" style="padding: 0px;">
+              <div class="mt-4">
+                <a href="#" type="button" class="btn btn-floating btn-lg" style="background: url(assets/image/mitra.png); color:#D9D9D9; border-radius: 5px 5px;"></i></a>
+                <a href="#" type="button" class="btn btn-floating btn-lg" style="background: url(assets/image/mitra.png); color:#D9D9D9; border-radius: 5px 5px;"></i></a>
+                <a href="#" type="button" class="btn btn-floating btn-lg" style="background: url(assets/image/mitra.png); color:#D9D9D9; border-radius: 5px 5px;"></i></a>
+              </div>
+            </div>
+          </div>
+          </section>
+          <!-- Section: Links -->
+    
+          <hr class="my-3">
+      
+          <!-- Section: Copyright -->
+          <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="col-ms text-center ">
+              <!-- Copyright -->
+              <div class="text-black p-3">
+                © 2020 Copyright
+                Portal Data Kota Bandung 2022. All rights reserved
+              </div>
+              <!-- Copyright -->
+            </div>
+            <!-- Grid column -->
+          </div>
+          </section>
+          <!-- Section: Copyright -->
+          </div>
+          <!-- Grid container -->
+        </footer>
+        <!-- End Footer -->
+    
+        <!-- ------------ Scroll Up ------------------ -->
+          <div id="progress">
+            <span id="progress-value">&#x1F815;</span>
+          </div>
+        <!---------------- End Scroll Up ----------------->  
+
+
+     <!-- JavaScript Files -->
+     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+     <script src="./js/app.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ 
+     <!-- MDB -->
+     <script type="text/javascript" src="js/mdb.min.js"></script>
+
+     <!-- Custom scripts -->
+     <script type="text/javascript"></script>
+
+     <!-- Scroll Up -->
+     <script src="js/script.js"></script>
+
+    <script>
+      $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+        });
+
+        $(document).ready(function() {
+          $('#myCarousel').carousel({
+            interval: 10000
+        })
+      });
+    </script>
+
+    <!-- Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+  </body>
+</html>

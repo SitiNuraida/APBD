@@ -1,5 +1,0 @@
-Code
-00: Menu Utama
-01: Pendapatan Daerah
-02: Belanja Daerah
-03: Pembiayaan Daerah

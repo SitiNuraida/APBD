@@ -455,7 +455,7 @@ nav .container {
   margin: 0 10px 0 0;
   width: 30px;
   height: 30px;
-  background: url(images/toggle-bg.png) no-repeat 8px 7px #B0DEFF;
+  background: url(#) no-repeat 8px 7px #B0DEFF;
   border-radius: 50%;
   float: left;
   transition: all .3s ease-in;
@@ -470,7 +470,8 @@ nav .container {
 }
 
 .active .icon {
-  background: url(images/toggle-bg.png) no-repeat 8px -25px #fff;
+  background: url(#) no-repeat -35px #fff;
+  
 }
 
 .active {
@@ -496,14 +497,14 @@ nav .container {
   padding: 10px;
   border: none;
   border-radius: 25px;
-  background: #B0DEFF;
+  background: #dcf1ff;
   z-index: -1;
 }
 
 .search-btn {
   height: 50px;
   width: 150px;
-  background: #fff;
+  background: #B0DEFF;
   border: none;
   color: #000;
   border-radius: 25px;

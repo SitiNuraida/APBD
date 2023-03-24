@@ -62,7 +62,7 @@ html {
 img {
   width: 200px;
   align-content: center;
-  /* padding-top: 3%; */
+  padding-top: 3%;
   padding-bottom: 3%;
 }
 
@@ -139,7 +139,7 @@ nav .container {
 
 .links a {
   color: var(--lightTwo);
-  margin-left: 0rem;
+  /* margin-left: 4.5rem; */
   display: inline-block;
   transition: 0.3s;
 }
@@ -215,7 +215,7 @@ nav .container {
 }
 
 .toggle-struktur {
-  line-height: 50px;
+  line-height: 48px;
   /* padding-bottom: 5%; */
   padding-top: 2%;
   text-align: center;
@@ -284,10 +284,6 @@ nav .container {
   .links a {
     color: #fff;
     margin-left: 0;
-  }
-
-  .main-menu {
-    margin-left: 4.5rem;
   }
 
   .links .btn {
@@ -439,7 +435,7 @@ h12 {
 }
 
 .img-penerimaan{
-  width: 147px;
+  width: 140px;
 }
 
 .white-card {
@@ -463,10 +459,9 @@ h12 {
 }
 
 .desc {
-  font-size: 15px;
+  font-size: 16px;
   text-align: justify;
   color: #000;
-  padding-top: 8px;
 }
 
 .baris {
@@ -499,6 +494,10 @@ h12 {
   line-height: 1.5;
 }
 
+#form-option {
+  display: inline-flex !important;
+}
+
 /* :::::::::::::: START FOOTER ::::::::::::::*/
 section.footeer{
   padding-top: 20px;
@@ -511,8 +510,7 @@ section.footeer{
 }
 
 .row a.navbar-brand img{
-  margin-left: -15px;
-  /* margin-left: 140px; */
+  margin-left: -25px;
 }
 
 .row .ft .col-lg-6{
@@ -572,12 +570,6 @@ section.footeer{
 
   #logo-open-data {
     width: 15%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .navb-footer {
-    margin-right: 0px !important;
   }
 
   /* .row a.navbar-brand img{

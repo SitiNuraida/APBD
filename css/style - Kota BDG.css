@@ -358,6 +358,15 @@ nav .container {
     transform: translate(-10%, 1px);
     padding-top: 5px;
   }
+  
+  .search-field {
+    padding-left: 22px !important;
+    font-size: 14px;
+  }
+
+  .question {
+    font-size: 15px !important;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -414,6 +423,9 @@ nav .container {
   top: 0;
   z-index: 2;
   transition: all 0.5s ease-out;
+  padding: 6%;
+  text-align: justify;
+  font-size: 16px;
 }
 
 /* FAQ */

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/belanja-daerah.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
     <!-- MDB icon -->
     <link rel="icon" href="./img/mdb-favicon.ico" type="image/x-icon" />
     
@@ -107,7 +110,7 @@
                           <div class="card-body">
                             <button class="btn" data-mdb-toggle="tooltip" data-mdb-placement="bottom" style="width: 100%; height: 150%;">
                             <h5 class="card-title" style="font-size: 50px; color: black; text-align: center;">4</h5>
-                            <p class="card-text" style="font-size: 20px; color: black; text-align: center; font-weight: 500;">Urusan</p>
+                            <p class="card-text" style="font-size: 18px; color: black; text-align: center; font-weight: 500;">Urusan</p>
                             </button>
                           </div>
                         <!-- </div> -->
@@ -118,7 +121,7 @@
                           <div class="card-body">
                             <button class="btn" data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="Bidang adalah perumpunan program perangkat daerah" style="width: 100%; height: 150%;">
                             <h5 class="card-title" style="font-size: 50px; color: black; text-align: center;">35</h5>
-                            <p class="card-text" style="font-size: 20px; color: black; text-align: center; font-weight: 500;">Bidang</p>
+                            <p class="card-text" style="font-size: 18px; color: black; text-align: center; font-weight: 500;">Bidang</p>
                             </button>
                           </div>
                         <!-- </div> -->
@@ -129,7 +132,7 @@
                           <div class="card-body">
                             <button class="btn" data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="Program adalah kumpulan kegiatan perangkat daerah" style="width: 100%; height: 150%;">
                             <h5 class="card-title" style="font-size: 50px; color: black; text-align: center;">186</h5>
-                            <p class="card-text" style="font-size: 20px; color: black; text-align: center; font-weight: 500;">Program</p>
+                            <p class="card-text" style="font-size: 18px; color: black; text-align: center; font-weight: 500;">Program</p>
                             </button>
                           </div>
                         <!-- </div> -->
@@ -140,7 +143,7 @@
                           <div class="card-body">
                             <button class="btn" data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="Kegiatan adalah pekerjaan yang akan dikerjakan oleh Perangkat Daerah selama 1 tahun anggaran" style="width: 100%; height: 150%;">
                             <h5 class="card-title" style="font-size: 50px; color: black; text-align: center;">974</h5>
-                            <p class="card-text" style="font-size: 20px; color: black; text-align: center; font-weight: 500;">Kegiatan</p>
+                            <p class="card-text" style="font-size: 18px; color: black; text-align: center; font-weight: 500;">Kegiatan</p>
                             </button>
                           </div>
                         <!-- </div> -->
@@ -151,7 +154,7 @@
                           <div class="card-body">
                             <button class="btn" data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="PD adalah Perangkat Daerah" style="width: 100%; height: 150%;">
                             <h5 class="card-title" style="font-size: 50px; color: black; text-align: center;">66</h5>
-                            <p class="card-text" style="font-size: 20px; color: black; text-align: center; font-weight: 500;">PD</p>
+                            <p class="card-text" style="font-size: 18px; color: black; text-align: center; font-weight: 500;">PD</p>
                             </button>
                           </div>
                         <!-- </div> -->
@@ -163,7 +166,7 @@
           <!-- End White Card -->
 
           <!-- proposi anggaran -->
-          <div class="container">
+          <div class="container" id="proporsi">
             <div class="row">
               <div class="col-sm-5 col-md-6"><h3 style="text-align: center;">Proporsi Anggaran Belanja Per Urusan</h3></div>
               <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0"><h3 style="text-align: center;">Proporsi Anggaran Belanja Per Rekening</h3></div>
@@ -567,7 +570,7 @@
                   <div id="chartdiv2"></div>
                       </div>
                     </div>
-                   </div>
+          </div>
                    <!-- end proporsi anggaran -->
 
                    <!-- Anggaran belanja perbidang -->
@@ -593,7 +596,7 @@
                           <input id="search-focus" type="search" id="form1" class="form-control" />
                           <label class="form-label" for="form1">Search</label>
                         </div>
-                        <button type="button" class="btn btn-primary">
+                        <button type="button" class="btn btn-primary" id="btn-search">
                           <i class="fas fa-search"></i>
                         </button>
                       </div>

@@ -348,6 +348,10 @@ html {
       font-size: 0.95rem;
       margin: 1.4rem 0 1.5rem;
     }
+
+    .inforaphic {
+      width: 100% !important;
+    }
   }
   
   @media screen and (max-width: 470px) {
@@ -368,7 +372,7 @@ html {
     }
 
     .inforaphic {
-        width: 26rem !important;
+        width: 23.5rem !important;
         padding-top: 12%;
         background-color: #B0DEFF;
     }

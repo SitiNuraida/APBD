@@ -340,6 +340,22 @@ nav .container {
     margin: 1.4rem 0 1.5rem;
   }
 
+  .container-search {
+    width: 30%;
+    position: absolute;
+    padding-left: 10%;
+    height: 110%;
+  }
+
+  #btn-search {
+    position: absolute;
+    margin-left: 90%;
+    height: 110%;
+  }
+
+  #proporsi {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -572,9 +588,9 @@ section.footeer{
     width: 15%;
   }
 
-  /* .row a.navbar-brand img{
-    margin-left: 180px;
-  } */
+  .row a.navbar-brand img{
+    margin-left: 140px;
+  }
 }
 
 /* :::::::::::::: END FOOTER ::::::::::::::*/

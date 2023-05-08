@@ -418,6 +418,18 @@ html {
   .dropdown:hover .dropdown-content-menu {
     display: block;
   } 
+
+  /* Custom */
+  #btn-thn {
+    z-index: 10;
+    position: absolute;
+    margin-top: 32%;
+    margin-left: 5%;
+  }
+
+  .inforaphic {
+    z-index: -1 !important;
+  }
   
   /* :::::::::::::: START FOOTER ::::::::::::::*/
   section.footeer{

@@ -1,5 +1,6 @@
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins' !important;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .light {
